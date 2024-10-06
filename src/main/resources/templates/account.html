@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${account.accountName}">Default</title>
+</head>
+<body>
+<div>
+    <h1 th:text="${account.accountName}"></h1>
+    <br/>
+    <form th:action="@{/users/{userId}/accounts/{accountId}(userId=${user.userId},accountId=${account.accountId})}"
+          method="post">
+        <div>
+            Account Name: <input type="text" th:field="${account.accountName}"/>
+        </div>
+        <div>
+            <input type="submit" value="Save Account"/>
+        </div>
+    </form>
+    <hr/>
+    <a th:href="@{/users/{userId}(userId=${user.userId})}" th:text="Back"></a>
+</div>
+</body>
+</html>
