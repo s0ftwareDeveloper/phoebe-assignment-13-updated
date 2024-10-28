@@ -1,0 +1,240 @@
+* {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    flex-direction: column;
+}
+
+section {
+    display: contents;
+}
+
+p {
+    font-family: Amvergo, serif;
+    font-size: 3em;
+    text-align: center;
+    margin: 15px 0;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    padding: 10px 10px;
+    margin-left: -10px;
+    font-family: Bahnschrift, serif;
+    font-size: .8em;
+}
+
+input:active, .account-container a:active{
+    color:gray;
+}
+
+.info input:focus, .info input:hover {
+    outline:none;
+    border-bottom: 2px solid black;
+}
+
+input::placeholder {
+    color: black;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    background-color: #2366A8;
+    margin: 50px 0;
+    padding: 50px;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 20px 20px 0 1px cornflowerblue;
+    width: 50%;
+    min-width: 500px;
+    scroll-margin-top: 150px;
+}
+
+fieldset label {
+    font-family: Bahnschrift, serif;
+    font-size: 2em;
+    display: block;
+    margin: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    width: 50%;
+    padding: 15px;
+    justify-content: center;
+}
+
+.description{
+    transform: rotate(270deg);
+    transform-origin: center;
+    color: white;
+    font-family: Amvergo, serif;
+    font-size: 7em;
+    padding: 0 30px;
+    border-left: 10px solid white;
+    width: 50%;
+}
+
+.desc-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator hr {
+    border: none;
+    border-top: 10px solid white;
+    width: 100%;
+}
+
+.user-accounts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 0 50px;
+}
+
+.account-container {
+    padding: 50px 20px;
+    background: #0F3C69;
+    box-shadow: 20px 20px 0 1px #3164BC;
+}
+
+.account-container a {
+    color: white;
+    font-family: Amvergo, serif;
+    font-size: 4em;
+    text-decoration: none;
+}
+
+.account-container a:active, .account-container a:hover {
+    box-shadow: inset 0 0 0 #3164BC;
+}
+
+.edit-button {
+    background: cornflowerblue;
+    backface-visibility: visible;
+    border-radius: 30px;
+    font-family: Amvergo, serif;
+    color: white;
+    font-size: 3em;
+    padding: 15px;
+    margin: -30px -30px auto 30px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 1px white;
+    transition: box-shadow 0.3s, transform 0.1s; /* Smooth transition */
+}
+
+.edit-button:hover, .edit-button:active {
+    background: #5083DC;
+    box-shadow: inset 0 0 0 white; /* Inset shadow when pressed */
+    transform: translate(5px, 5px);  /* Move the button down slightly */
+}
+
+.save-button-container {
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+}
+
+.save-button-container input {
+    box-shadow: 5px 5px 0 1px #2366A8;
+}
+
+.save-button-container input:focus {
+    background: cornflowerblue;
+    box-shadow: inset 0 0 0 #2366A8;
+}
+
+.popup-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.popup-content {
+    position: relative;
+    margin: auto auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.close-popup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    color: black;
+}
+
+/* Show the popup when the checkbox is checked */
+.popup-toggle:checked + .edit-button + .popup {
+    display: flex; /* Show the popup */
+}
+
+/* Show the popup when the checkbox is checked */
+.popup-toggle:checked + .delete-account-button + .popup {
+    display: flex; /* Show the popup */
+}
+
+.delete-account-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.delete-account-button:active, .delete-account-button:hover {
+    box-shadow: inset 0 0 0 #870822; /* Inset shadow when pressed */
+    /*transition: box-shadow 0.3s, transform 0.1s; !* Smooth transition *!*/
+}
+
+.delete-account-button {
+    /*margin: 0 auto;*/
+    padding: 20px;
+    /*font-size: 4em;*/
+    font-size: 5em;
+    background: #870822;
+    box-shadow: 15px 15px 0 2px #B51535;
+    margin-right: 15px;
+}
+
+#create-bank-account {
+    margin-top: 50px;
+    font-size: 5em;
+    padding: 30px;
+    color: white;
+}

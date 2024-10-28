@@ -1,0 +1,16 @@
+h1 {
+  font-size: 6em;
+}
+
+a {
+    font-size: 3em;
+    text-decoration: none;
+    padding: 20px 40px;
+    margin: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

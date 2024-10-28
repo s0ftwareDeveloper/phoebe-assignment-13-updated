@@ -1,24 +1,21 @@
 package com.coderscampus.assignment13.service;
 
 import com.coderscampus.assignment13.domain.Account;
-import com.coderscampus.assignment13.domain.User;
 import com.coderscampus.assignment13.repository.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
+@AllArgsConstructor
 @Service
 public class AccountService {
 
-    @Autowired
-    AccountRepository accountRepo;
+    private final AccountRepository accountRepo;
 
     public Account findByAccountId(Long accountId) {
         return accountRepo.findByAccountId(accountId);
     }
 
-    public Account saveAccount(Account account) {
+    public Account save(Account account) {
         return accountRepo.save(account);
     }
 }

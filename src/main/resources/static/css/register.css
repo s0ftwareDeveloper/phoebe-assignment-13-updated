@@ -1,0 +1,50 @@
+.account-info {
+    flex-direction: column;
+    gap: 50px;
+    display: flex;
+    background-color: #2366A8;
+    margin: 50px 0;
+    padding: 50px;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 20px 20px 0 1px cornflowerblue;
+    width: auto;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-family: Amvergo, serif;
+    font-size: 4em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+label input{
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    font-family: Bahnschrift, serif;
+    color: white;
+    font-size: 0.7em;
+    margin-left: 30px;
+}
+
+label input:focus {
+    outline:none;
+}
+
+.create-account {
+    font-size: 4em;
+    border: none;
+    background: cornflowerblue;
+    box-shadow: 10px 10px 0 1px white;
+}
+
+.create-account:active, .create-account:hover {
+    box-shadow: inset 0 0 0 white; /* Inset shadow when pressed */
+}

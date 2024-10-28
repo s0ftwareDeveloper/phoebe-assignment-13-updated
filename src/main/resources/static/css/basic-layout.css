@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Amvergo;
+    src: url(Amvergo.otf);
+}
+
+body {
+    background-color: #E9FBFF;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #2366A8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    font-size: 3em;
+    font-family: Amvergo, serif;
+    margin: 0 70px;
+}
+
+nav > ul > li {
+    color: white;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
+
+nav > ul > li a:hover {
+    color: cornflowerblue;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+li > a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h3 {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    font-family: Amvergo, serif;
+    font-size: 5em;
+    color: navy;
+    margin-bottom: 5px;
+}
+
+h1 {
+    margin-top: 150px;
+}
+
+hr {
+    border: none;
+    border-top: 5px solid cornflowerblue;
+    width: 70%;
+}
+
+.button {
+    background: #2366A8;
+    backface-visibility: visible;
+    border-radius: 30px;
+    font-family: Amvergo, serif;
+    color: white;
+    box-shadow: 20px 20px 0 1px cornflowerblue;
+    transition: box-shadow 0.3s, transform 0.1s; /* Smooth transition */
+    cursor: pointer;
+}
+
+.button:active, .button:hover {
+    box-shadow: inset 0 0 0 cornflowerblue; /* Inset shadow when pressed */
+    transform: translate(10px, 10px);  /* Move the button down slightly */
+}
